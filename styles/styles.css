@@ -1,19 +1,20 @@
 :root {
-    --color-main: #8B4513; /* Коричневый седла */
-    --color-main-dark: #654321; /* Темный коричневый */
-    --color-accent: #CD5C5C; /* Красный кактуса */
-    --color-accent-light: #DEB887; /* Бежевый пустыни */
-    --color-text: #2F4F4F; /* Темный серо-зеленый */
-    --color-text-dark: #696969; /* Серый пыли */
-    --color-background: #F5F5DC; /* Бежевый пергамента */
-    --color-background-light: #FAF0E6; /* Светлый лен */
-    --color-background-card: #FFF8DC; /* Кукурузный */
+    --color-main: #5D2906; 
+    --color-main-dark: #3D1B03;
+    --color-accent: #B22222;
+    --color-accent-light: #F5E6D3; 
+    --color-text: #2C2C2C;
+    --color-text-dark: #4A4A4A;
+    --color-background: #F5F5DC;
+    --color-background-light: #FAF0E6;
+    --color-background-card: #FFF8DC;
     --color-white: #FFFFFF;
-    --color-gold: #DAA520; /* Золотой шпоры */
-    --border-radius: 8px; /* Более угловатые как на Диком Западе */
+    --color-gold: #DAA520; 
+    
+    --border-radius: 8px;
     --transition: all 0.3s ease;
-    --shadow: 0 4px 6px rgba(139, 69, 19, 0.1);
-    --shadow-hover: 0 8px 15px rgba(139, 69, 19, 0.2);
+    --shadow: 0 4px 6px rgba(93, 41, 6, 0.1);
+    --shadow-hover: 0 8px 15px rgba(93, 41, 6, 0.2);
 }
 
 * {
@@ -155,7 +156,7 @@ nav {
 .nav__link {
     display: block;
     padding: 15px 25px;
-    color: var(--color-accent-light);
+     color: #fff;
     text-decoration: none;
     transition: var(--transition);
     position: relative;
@@ -169,8 +170,8 @@ nav {
 }
 
 .nav__link--active {
-    color: var(--color-gold);
-    background-color: rgba(218, 165, 32, 0.1);
+    color: #FFD700;
+     background-color: rgba(93, 41, 6, 0.3);
 }
 
 .nav__link--active::after {
@@ -210,11 +211,13 @@ nav {
     justify-content: center;
 }
 
-.about h3 {
-    color: var(--color-main-dark);
-    margin-bottom: 15px;
-    font-size: 1.3rem;
+.about h3, 
+.skills__header, 
+.projects__header, 
+.contacts__header {
+    color: #3D1B03; 
 }
+
 
 .skills__header, .projects__header, .contacts__header, .diary__header, .diary__buttons {
     text-align: center;
@@ -294,7 +297,7 @@ nav {
     position: relative;
     display: inline-block;
     margin: 0;
-    color: var(--color-main-dark);
+ color: #3D1B03;
 }
 
 .projects {
@@ -421,11 +424,25 @@ nav {
     display: none;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 .contacts {
     display: grid;
+    grid-template-columns: 1fr;
     justify-content: center;
     margin: 30px;
     padding: 30px;
+    position: relative;
     background: linear-gradient(135deg, var(--color-accent-light), var(--color-background-card));
     border-radius: var(--border-radius);
     border: 2px solid var(--color-main);
@@ -435,7 +452,7 @@ nav {
     background-color: var(--color-background-card);
     padding: 40px;
     border-radius: var(--border-radius);
-    max-width: 80%;
+    width: 80%;
     justify-self: center;
     border: 1px solid var(--color-accent-light);
 }
@@ -453,19 +470,24 @@ nav {
 .form__group > label {
     text-align: left;
     margin-bottom: 8px;
-    color: var(--color-main-dark);
-    font-weight: 600;
+    color: #3D1B03;
+    font-weight: 700;
 }
 
 .form__group > input, select, textarea {
     font-size: 1rem;
     padding: 12px;
-    border: 2px solid var(--color-accent-light);
     border-radius: 8px;
     background: var(--color-background-light);
-    color: var(--color-text);
+      border: 2px solid #8B4513; 
+    color: #2C2C2C;
     transition: var(--transition);
     font-family: inherit;
+}
+
+.required {
+    color: #B22222; 
+    font-weight: bold;
 }
 
 .form__group > input:focus, select:focus, textarea:focus {
@@ -524,8 +546,9 @@ nav {
 
 .btn--submit {
     border-radius: var(--border-radius);
-    background: linear-gradient(135deg, var(--color-main), var(--color-gold));
-    color: var(--color-white);
+        background: linear-gradient(135deg, #5D2906, #8B4513);
+    color: #FFFFFF;
+    font-weight: 700;
     border: 2px solid var(--color-main-dark);
 }
 
